@@ -33,3 +33,24 @@ let ninja1 = new Ninja("john", 20);
 ninja1.sayName();
 ninja1.drinkSake();
 console.log(ninja1.showStats());
+
+
+class Sensei extends Ninja{
+    wisdom: number;
+    
+    constructor(name: string ){
+        super(name, 200);
+        this.strength = 10;
+        this.speed = 10;
+        this.wisdom = 10;
+    }
+
+    speakWisdom(): void{
+        this.drinkSake();
+        console.log("What one programmer can do in one month, two programmers can do in two months.");
+    }
+}
+
+const superSensei = new Sensei("Master Splinter");
+superSensei.speakWisdom();
+console.log(superSensei.showStats());
