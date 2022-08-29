@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 // 1
 var hello = 'world';
 console.log(hello);
@@ -71,12 +71,12 @@ console.log(genre);
 // syntax error. dojo is never declared in global scope
 // 8
 function makeDojo(name, students) {
-    var dojo = { message: "" };
+    let dojo = { message: "" };
     dojo.name = name;
     dojo.students = students;
     if (dojo.students > 50) {
         dojo.hiring = true;
-        dojo.message = "formed new dojo. name: ".concat(dojo.name, ", students: ").concat(dojo.students, ", hiring: ").concat(dojo.hiring);
+        dojo.message = `formed new dojo. name: ${dojo.name}, students: ${dojo.students}, hiring: ${dojo.hiring}`;
     }
     else if (dojo.students <= 0) {
         dojo.message = "closed for now";

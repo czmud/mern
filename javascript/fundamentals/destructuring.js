@@ -1,49 +1,49 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 // 1
-var cars = ['Tesla', 'Mercedes', 'Honda'];
-var randomCar = cars[0];
-var otherRandomCar = cars[1];
+const cars = ['Tesla', 'Mercedes', 'Honda'];
+const [randomCar] = cars;
+const [, otherRandomCar] = cars;
 //Predict the output
 console.log(randomCar); // 'Tesla'
 console.log(otherRandomCar); // 'Mercedes'
 // 2
-var employee = {
+const employee = {
     name: 'Elon',
     age: 47,
     company: 'Tesla'
 };
-var otherName = employee.name;
+const { name: otherName } = employee;
 //Predict the output
 // console.log(name); syntax error. name is not defined
 console.log(otherName); // 'Elon'
 // 3
-var person = {
+const person = {
     name: 'Phil Smith',
     age: 47,
     height: '6 feet'
 };
-var password = '12345';
+const password = '12345';
 // const { password: hashedPassword } = person; syntax error - variable name mismatch
 //Predict the output
 console.log(password); // '12345'
 // console.log(hashedPassword); syntax error. hashedPassword is not defined because previous line failed
 // 4
-var numbers = [8, 2, 3, 5, 6, 1, 67, 12, 2];
-var first = numbers[1];
-var second = numbers[3];
-var third = numbers[8];
+const numbers = [8, 2, 3, 5, 6, 1, 67, 12, 2];
+const [, first] = numbers;
+const [, , , second] = numbers;
+const [, , , , , , , , third] = numbers;
 //Predict the output
 console.log(first == second); // false
 console.log(first == third); // true
 // 5
-var lastTest = {
+const lastTest = {
     key: 'value',
     secondKey: [1, 5, 1, 8, 3, 3]
 };
-var key = lastTest.key;
-var secondKey = lastTest.secondKey;
-var willThisWork = secondKey[1];
+const { key } = lastTest;
+const { secondKey } = lastTest;
+const [, willThisWork] = secondKey;
 //Predict the output
 console.log(key); // 'value'
 console.log(secondKey); // [1, 5, 1, 8, 3, 3]

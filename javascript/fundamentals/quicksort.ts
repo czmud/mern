@@ -1,8 +1,5 @@
 export {}
 
-
-
-
 let numberArray: number[] = [9, 4, 5, 1, 2, 10, 6, 7, 3, 8];
 
 function quickSort( arr: number[], i: number = 0, j: number = arr.length-1 ): number[] {
@@ -13,15 +10,11 @@ function quickSort( arr: number[], i: number = 0, j: number = arr.length-1 ): nu
     let p = j;
 
     let pivot: number = selectPivot(arr, i, p);
-    console.log("pivot: " + pivot);
 
     while( i < j ){
-        console.log(arr);
         if( arr[i] < pivot ){
-            console.log(i);
             i++
         } else if( arr[j] > pivot ) {
-            console.log(j);
             j--
         } else {
             [arr[i], arr[j]] = [arr[j] , arr[i]];
@@ -50,4 +43,4 @@ function selectPivot( arr: number[], start: number, end: number ): number{
 }
 
 console.log(quickSort(numberArray));
-console.log(quickSort([1]));
+console.log(quickSort([1, 10, 5]));

@@ -1,5 +1,22 @@
 {
+  "name": "mern",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
   "devDependencies": {
     "typescript": "^4.8.2"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/czmud/mern.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/czmud/mern/issues"
+  },
+  "homepage": "https://github.com/czmud/mern#readme"
 }

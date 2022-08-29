@@ -1,6 +1,6 @@
 "use strict";
-exports.__esModule = true;
-var pokemon = Object.freeze([
+Object.defineProperty(exports, "__esModule", { value: true });
+const pokemon = Object.freeze([
     { "id": 1, "name": "Bulbasaur", "types": ["poison", "grass"] },
     { "id": 5, "name": "Charmeleon", "types": ["fire"] },
     { "id": 9, "name": "Blastoise", "types": ["water"] },
@@ -26,26 +26,26 @@ var pokemon = Object.freeze([
     { "id": 148, "name": "Dragonair", "types": ["dragon"] }
 ]);
 // divisible by 3
-var list1 = pokemon.filter(function (p) { return p.id % 3 === 0; });
+const list1 = pokemon.filter(p => p.id % 3 === 0);
 console.log(list1);
 // fire types
-var list2 = pokemon.filter(function (p) { return p.types.includes('fire'); });
+const list2 = pokemon.filter(p => p.types.includes('fire'));
 console.log(list2);
 // more than one type
-var list3 = pokemon.filter(function (p) { return p.types.length > 1; });
+const list3 = pokemon.filter(p => p.types.length > 1);
 console.log(list3);
 // only the names of the pokemon
-var list4 = pokemon.map(function (p) { return p.name; });
+const list4 = pokemon.map(p => p.name);
 console.log(list4);
 // only names where id>99
-var list5 = pokemon.filter(function (p) { return p.id > 99; }).map(function (p) { return p.name; });
+const list5 = pokemon.filter(p => p.id > 99).map(p => p.name);
 console.log(list5);
 // only names where only type is poison
-var list6 = pokemon.filter(function (p) { return p.types.length === 1 && p.types.includes('poison'); }).map(function (p) { return p.name; });
+const list6 = pokemon.filter(p => p.types.length === 1 && p.types.includes('poison')).map(p => p.name);
 console.log(list6);
 // return the first type of pokemon with second type of flying
-var list7 = pokemon.filter(function (p) { return p.types.length > 1 && p.types[1] === 'flying'; }).map(function (p) { return p.types[0]; });
+const list7 = pokemon.filter(p => p.types.length > 1 && p.types[1] === 'flying').map(p => p.types[0]);
 console.log(list7);
 // count of pokemon of normal type
-var count8 = pokemon.filter(function (p) { return p.types.includes('normal'); }).length;
+const count8 = pokemon.filter(p => p.types.includes('normal')).length;
 console.log(count8);
