@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import { UserFormReducer } from './components/userFormReducer';
+import { BoxContainer } from './components/boxContainer';
 
 function App() {
   return (
     <div className="App">
-        <UserFormReducer/>
+        <BoxContainer/>
     </div>
   );
 }
