@@ -48,7 +48,7 @@ export const UserForm = ( props: {}) => {
         setEmail(event.target.value)
         if(event.target.value.length < 1 ) {
             setEmailError("Email is required");
-        } else if (event.target.value.length < 8 ) {
+        } else if (event.target.value.length < 5 ) {
             setEmailError("Email must be at least 5 characters")
         } else {
             setEmailError("");

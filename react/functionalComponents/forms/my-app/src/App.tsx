@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import { UserForm } from './components/userForm';
+import { UserFormReducer } from './components/userFormReducer';
 
 function App() {
   return (
     <div className="App">
-        <UserForm ></UserForm>
+        <UserFormReducer/>
     </div>
   );
 }
