@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Pokemon } from './pokemon';
-import { PokemonButton } from './pokemonButton';
+import { PokemonButtonAxios } from './pokemonButtonAxios';
 import { PokemonDisplay } from './pokemonDisplay';
 
 
@@ -16,7 +16,7 @@ export const PokemonContainer = () => {
 
     return(
         <>
-            <PokemonButton pokemonHandler={pokemonHandler}></PokemonButton>
+            <PokemonButtonAxios pokemonHandler={pokemonHandler}></PokemonButtonAxios>
             <PokemonDisplay pokemons={pokemons} isSubmitted={isSubmitted}></PokemonDisplay>
         </>
         )
