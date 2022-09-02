@@ -11,9 +11,7 @@ export const BoxForm = (props: BoxFormProps) => {
 
     const saveBox = (event: FormEvent) => {
         event.preventDefault();
-        console.log("nine")
-        if( color.length < 1 || pixelSize < 1 ){
-            console.log("ten");
+        if( color.length < 1 || pixelSize < 1 ){ 
             return;
         }
         props.formHandler( new Box(color, pixelSize));
