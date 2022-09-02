@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import { BoxContainer } from './components/boxContainer';
+import { TodoContainer } from './components/todoList/todoContainer';
 
 function App() {
   return (
     <div className="App">
-        <BoxContainer/>
+        <TodoContainer/>
     </div>
   );
 }
