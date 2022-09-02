@@ -9,7 +9,7 @@ interface TodoProps{
     toggleIsComplete: Function;
 }
 
-const todoComplete = {
+const todoCompleteStyle = {
     textDecoration: "line-through",
 }
 
@@ -25,7 +25,9 @@ export const TodoDisplay = (props: TodoProps) => {
         <table>
             <tbody>
                     { props.todos.map( (todo, i) => <tr key={i}>
-                        { todo.isComplete ? <td style={todoComplete}>{ todo.description }</td> : <td>{ todo.description }</td> }
+                        <td style={ todo.isComplete ? todoCompleteStyle : {}}>
+                            { todo.description }
+                        </td>
                         <td>
                             <form>
                                 <input type="checkBox" checked={todo.isComplete}
